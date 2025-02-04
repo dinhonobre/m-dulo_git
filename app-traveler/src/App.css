@@ -1,0 +1,119 @@
+/* Reset Básico */
+body, html {
+  margin: 0; /* Remove margens padrão */
+  padding: 0; /* Remove preenchimento padrão */
+  font-family: Arial, sans-serif; /* Define a fonte padrão */
+  box-sizing: border-box; /* Inclui bordas e preenchimentos no tamanho total */
+}
+
+/* Estilo Geral */
+.App {
+  position: relative; /* Permite posicionamento absoluto de elementos filhos */
+  height: 100vh; /* Define a altura como 100% da altura da janela */
+  display: flex; /* Usa flexbox para layout */
+  flex-direction: column; /* Organiza os itens em coluna */
+  background-color: #f8f9fa; /* Cor base de fundo */
+}
+
+/* Cabeçalho com o menu hambúrguer */
+.hamburger-menu {
+  background-color: #008cba; /* Cor de fundo azul */
+  color: white; /* Cor do texto no cabeçalho */
+  padding: 15px 20px; /* Espaçamento interno */
+  position: relative; /* Necessário para posicionar o menu */
+  display: flex; /* Organiza os itens em linha */
+  align-items: center; /* Alinha verticalmente */
+  justify-content: space-between; /* Espaça os itens */
+}
+
+/* Botão do menu hambúrguer */
+.menu-btn {
+  font-size: 1.5rem; /* Tamanho maior para o ícone */
+  background: none; /* Remove o fundo padrão */
+  border: none; /* Remove bordas */
+  color: white; /* Cor do ícone */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+}
+
+/* Conteúdo do menu (exibido ao abrir) */
+.menu-content {
+  position: absolute; /* Permite sobreposição */
+  top: 100%; /* Exibe logo abaixo do cabeçalho */
+  left: 0; /* Alinha à esquerda */
+  right: 0; /* Alinha à direita */
+  background-color: white; /* Fundo branco */
+  color: #333; /* Cor do texto */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  padding: 10px 0; /* Espaçamento interno */
+  z-index: 1000; /* Coloca o menu acima de outros elementos */
+}
+
+/* Itens do menu */
+.menu-item {
+  display: block; /* Cada item ocupa uma linha */
+  padding: 10px 20px; /* Espaçamento interno */
+  text-align: left; /* Alinha o texto à esquerda */
+  border-bottom: 1px solid #ddd; /* Linha de separação entre itens */
+  color: #008cba; /* Cor azul para os itens */
+  text-decoration: none; /* Remove sublinhado */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+}
+
+/* Último item do menu sem borda */
+.menu-item:last-child {
+  border-bottom: none; /* Remove a borda do último item */
+}
+
+/* Itens do menu ao passar o mouse */
+.menu-item:hover {
+  background-color: #f4f4f4; /* Muda a cor de fundo ao passar o mouse */
+}
+
+/* Imagem de Fundo */
+.background {
+  flex: 1; /* Permite que o fundo ocupe o espaço restante */
+  background-image: url('https://image.freepik.com/vetores-gratis/mapa-da-cidade-abstrato-com-alfinetes-coloridos_95169-2610.jpg'); /* Troque pela sua imagem */
+  background-size: cover; /* Cobre todo o espaço disponível */
+  background-position: center; /* Centraliza a imagem */
+  display: flex; /* Usa flexbox para layout */
+  flex-direction: column; /* Organiza os itens em coluna */
+  justify-content: flex-end; /* Alinha os itens ao fundo */
+}
+
+/* Sugestões de Lugares */
+.suggestions {
+  position: relative; /* Permite posicionamento relativo */
+  bottom: 0; /* Alinha ao fundo */
+  display: flex; /* Usa flexbox para layout */
+  gap: 15px; /* Espaçamento entre os itens */
+  overflow-x: auto; /* Permite rolagem horizontal */
+  padding: 15px; /* Espaçamento interno */
+  background: rgba(255, 255, 255, 0.9); /* Fundo branco com transparência */
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+}
+
+.attraction-card {
+  min-width: 200px; /* Largura mínima do cartão */
+  background: white; /* Fundo branco */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+  padding: 15px; /* Espaçamento interno */
+  text-align: center; /* Alinha o texto ao centro */
+  transition: transform 0.3s, box-shadow 0.3s; /* Animação suave para transformações */
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px); /* Move o cartão para cima ao passar o mouse */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.attraction-card h3 {
+  margin: 0 0 10px; /* Margem inferior do título */
+  font-size: 18px; /* Tamanho da fonte do título */
+  color: #333; /* Cor do texto do título */
+}
+
+.rating-display p {
+  font-size: 14px; /* Tamanho da fonte da avaliação */
+  color: #555; /* Cor do texto da avaliação */
+}

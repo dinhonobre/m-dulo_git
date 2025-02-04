@@ -1,0 +1,20 @@
+.attraction-cards {
+    display: flex; /* Usa flexbox para layout */
+    flex-wrap: wrap; /* Permite que os cards se movam para a próxima linha */
+    gap: 15px; /* Espaçamento entre os cards */
+}
+
+.attraction-card {
+    background: white; /* Fundo branco para o card */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    padding: 15px; /* Espaçamento interno */
+    text-align: center; /* Alinha o texto ao centro */
+    min-width: 200px; /* Largura mínima do card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animação suave para transformações */
+}
+
+.attraction-card:hover {
+    transform: translateY(-5px); /* Move o card para cima ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
